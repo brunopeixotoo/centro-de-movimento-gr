@@ -1,0 +1,324 @@
+@charset "UTF-8";
+
+/*Fazendo o reset do CSS*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    outline: 0;
+}
+/*Aplicando a estilização da fonte no Body*/
+body {
+    font-family: "Roboto", sans-serif;
+    
+}
+
+/*Fazer com que o direcionamento dos itens do cabeçalho sejam suaves*/
+html {
+    scroll-behavior: smooth;
+}
+
+/*Início do MENU*/
+#nav{
+    display: none;
+    width:100%;
+    background-color: rgb(54, 54, 54);
+    padding:20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index:8;
+}
+
+.nav-list{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
+
+.nav-list a {
+    color:white;
+    text-decoration: none;
+
+}
+
+span#burguer {
+    background-color: rgb(54, 54, 54);
+    position: sticky;
+    top: 0;
+    z-index:9;
+    color: white;
+    display: block;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+}
+/*Fim do MENU*/
+
+/*Início do WELCOME*/
+.welcome{
+    background-image:url("../img/inicio.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: calc(60vh);
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.welcome-text{ 
+    color:white;
+    font-weight: bold;
+    padding: 0 8px 0 8px;
+    text-align:center; 
+    font-size: 18px;
+}
+
+.first-welcome-text h1{
+    max-width: 250px;
+    margin: 10px auto;
+}
+
+.second-welcome-text{
+    margin-top: 40px;
+}
+
+.second-welcome-text button{
+    cursor: pointer;
+    margin-top:15px;
+    background-color: white;
+    color: black;
+    border: 0;
+    padding: 8px;
+    border-radius: 50px;
+    font-size: 0.9em;
+    font-weight: bold;
+    /*criando intervalo para o aumento do botão*/
+    transition: 0.9s;
+}
+/*buttom muda de tamanho quando usa o mouse*/
+.second-welcome-text button:hover{
+    transform: scale(1.1);
+}
+/*Fim do WELCOME*/
+
+/*Início do "Sobre"*/
+.about{
+    display:flex;
+    flex-direction: column;
+    margin-top: 20px;
+    padding: 0 15px 0 15px;
+}
+
+h2{
+    text-align: center;
+}
+
+.about img{
+    width:250px;
+    margin: 30px auto 30px auto;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.about p{
+    text-align: justify;
+    line-height: 1.8;
+    padding: 0 20px;
+}
+/*Fim do "Sobre"*/
+
+/*Vídeo*/
+.video{
+    margin-top:20px;
+    padding: 15px;
+    background-color: rgb(247, 230, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.video video{
+    max-width: 100%;
+    height: 500px;
+    padding: 5px;
+    background-color:white;
+    margin-top: 20px;
+    border: 1px solid rgb(54, 54, 54);
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+/*FIM VIDEO*/
+
+/*MODALIDADES*/
+.style{
+    margin: 15px 0 10px 0;
+    text-align:center
+}
+
+.style p{
+    padding: 8px;
+}
+
+.list-style{
+    line-height: 2.5;
+    list-style: none;
+    
+}
+
+.list-style li{
+    background-color:rgb(247, 230, 0);
+    width: 50%;
+    margin:15px auto 10px auto; 
+    border-radius: 10px;
+    transition: 0.9s;
+}
+.list-style li:hover {
+    transform: scale(1.1);
+    border: 1px solid black;
+    filter: drop-shadow(-3px 10px 6px #404040); /*Sombreado*/
+}
+
+.list-style li a{
+    text-decoration:none;
+    color:black;
+    font-weight: bold;
+}
+
+.whatsapp-class {
+    background-color: rgb(54, 54, 54);
+    margin: 30px auto 30px auto;
+    width:80%;
+    padding: 10px;
+    border-radius: 20px;
+    transition: 0.9s;
+}
+
+.whatsapp-class a {
+    color:white;
+    text-decoration:none;
+}
+
+.whatsapp-class:hover {
+    transition: 0.9s;
+    transform: scale(1.1);
+    border: 1px solid black;
+    filter: drop-shadow(-3px 10px 6px #404040);
+}
+
+/*FIM MODALIDEDES*/
+
+/*PROJETOS*/
+.projects{
+    padding: 15px;
+    background-color:rgb(247, 230, 0);
+}
+
+.projects h2 {
+    margin: 0px 0px 20px 0px;
+}
+
+.carousel {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease;
+    max-width: 100%;
+    height: 250px;
+}
+
+.carousel img {
+    flex-shrink: 0;
+    width: auto; 
+    height: 100%; 
+    object-fit: contain;
+    padding: 0px 5px;
+    filter: drop-shadow(-3px 10px 6px #404040);
+}
+
+.prev-button,
+.next-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 2;
+}
+
+.prev-button {
+    left: 0;
+}
+
+.next-button {
+    right: 0;
+}
+/*FIM PROJETOS*/
+
+/*Início de PROFESSORES*/
+.teacher {
+    width: 100%;
+    padding: 20px;
+    text-align:center;
+}
+
+.teacher h2{
+    padding: 15px;
+}
+
+.teacher img{
+    max-width: 200px;
+    border-radius: 50%;
+}
+
+
+.teacher p {
+    text-align:justify;
+    padding: 20px;
+    line-height:2.0;
+}
+/*Fim de PROFESSORES*/
+
+/*Foto anterior ao Footer*/
+.foto {
+    width: 100%;
+    background-color: black;
+    height: calc(50vh - 80px);
+    background-image: url("../img/imagem10.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*Footer*/
+/*Início do Rodapê*/
+
+footer {
+    width: 100%;
+    color: white;
+    background-color: rgb(54, 54, 54);
+    padding: 20px;
+    line-height:1.5;
+}
+footer a {
+    text-decoration: none;
+    color: white;
+    text-align:left;
+}
+
+footer p{
+    
+}
+footer h6 {
+    margin-top: 60px;
+    padding-bottom: 0;
+}
